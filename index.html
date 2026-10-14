@@ -1,19 +1,45 @@
 /*
 Create a new project on your local machine,
 then push it your remote repo.
-● Create two branches (dev & test) then create one
-file on each branch, and push this changes to the remote repo.
-● Merge this changes on Main branch and then push it to your
-remote main branch.
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:Rawwann/lab2-vc.git
+git push -u origin main
+● Create two branches (dev & test) then create one file on each branch, and push this changes to the remote repo.
+git branch dev
+git branch test
+git switch dev THEN create devfile.txt
+git add .
+git commit -m "dev branch commit 1"
+git switch test THEN create testfile.txt
+git add .
+git commit -m "test branch commit 1"
+git push -u origin test
+git switch dev
+git push -u origin dev
+● Merge this changes on Main branch and then push it to your remote main branch.
+git switch main
+git merge dev
+git merge test
+git push
 ● Tell me how to remove them locally and remotely.
-● Tell me how to checkout another branch without commit
-changes
+locally: git branch -d dev / git branch -d test
+remotely: git push origin :dev / git push origin :test
+● Tell me how to checkout another branch without commit changes
+git stash list
+
 
 Lab 2
 
 ● Create an annotated tag with tagname (v1.7) .
+git tag -a v1.7 -m "version 1.7"
 ● Push it to the remote repository.
 ● Tell me how to list tags.
+git tag
 ● Tell me how to delete tag locally and remotely.
+locally: git tag -d v1.7
+remotely:git push origin --delete v1.7
 ● Add an image in the README.md file.
+![Lab Img](sYOOkiEEE.jpg)
 */
