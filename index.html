@@ -31,7 +31,11 @@ locally: git branch -d dev / git branch -d test
 remotely: git push origin :dev / git push origin :test
 
 ● Tell me how to checkout another branch without commit changes
-git stash list
+git stash
+git git stash list
+git switch main
+git switch dev
+git stash pop
 
 ● Create an annotated tag with tagname (v1.7) .
 git tag -a v1.7 -m "version 1.7"
